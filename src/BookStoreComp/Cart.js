@@ -22,7 +22,7 @@ export default function Cart() {
   return (
     <div className="cart">
       <div className="address">
-        <form name="addressForm" onSubmit={onSubmit}>
+        <form name="addressForm" onSubmit={()=>onSubmit()}>
           <div className="label">
             <h6>Name </h6>
             <input type="text" placeholder="Enter Your Name" required />
@@ -45,7 +45,6 @@ export default function Cart() {
               id="savebtn"
               onClick={() => {
                 onSubmit();
-                alert("address Saved");
               }}
             >
               {" "}

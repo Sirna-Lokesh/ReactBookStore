@@ -36,7 +36,7 @@ const  Books = [
     price: 25,
   },
   {
-    title: "Speak, Okinawa",
+    title: "Speak, ",
     id: 5,
     url: "https://s26162.pcdn.co/wp-content/uploads/2021/02/71QrVb8KJkL-706x1024.jpg",
     author: "Elizabeth Miki Brina",
@@ -45,7 +45,7 @@ const  Books = [
     price: 12.35,
   },
   {
-    title: "My Year Abroad",
+    title: "My Year ",
     id: 6,
     url: "https://s26162.pcdn.co/wp-content/uploads/2020/12/91HFMgnZCbL-678x1024.jpg",
     author: "Chang Rae-Lee",
@@ -63,7 +63,7 @@ const  Books = [
     price: 5.75,
   },
   {
-    title: "The Double Trio",
+    title: "The Double ",
     id: 8,
     url: "https://s26162.pcdn.co/wp-content/uploads/2021/04/200623_Double_Trio_1-01-copy.jpg",
     author: "Nathaniel Mackey",

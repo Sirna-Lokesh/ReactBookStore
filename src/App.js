@@ -4,7 +4,6 @@ import { BrowserRouter as BR, Route, Routes, useParams } from 'react-router-dom'
 import Home from './BookStoreComp/Home';
 import MyOrders from './BookStoreComp/MyOrders';
 import Cart from './BookStoreComp/Cart';
-import Routing2 from './Routing/Routing2';
 // import HomeContainer from './reduxContainers/HomeContainer';
 export default function App() {
 

@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// interface intialStateInterface{
+//     itemNumber:number,
+//     numOfItems:number,
+//     price:number,
+//     id:any[],
+//     orders:any[]
+// }
 const initialState={
     itemNumber:0,
     numOfItems:0,
