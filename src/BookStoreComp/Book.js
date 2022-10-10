@@ -4,14 +4,10 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import "./Book.css"
 import { useDispatch } from 'react-redux';
-import { addToCart } from './CartSlice';
+import { addToCart } from './CartSlice.ts';
 import { Link } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
 export default function Book(props) {
-  
-
-
-
   const dispatch = useDispatch();
   function buyBook() {
     alert("book Added To cart")
@@ -19,6 +15,7 @@ export default function Book(props) {
       addToCart({ price: Books[index].price, bookNumber: props.index+1 })
     );
   }
+
 
 
   const index=props.index;

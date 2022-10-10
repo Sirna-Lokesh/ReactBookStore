@@ -2,10 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./cart.css";
 import { Link } from "react-router-dom";
-import { placeOrder } from "./CartSlice";
+import { placeOrder } from "./CartSlice.ts";
 import Books from "./mydb";
 import { useDispatch } from "react-redux";
-import { removeItemsFromCart } from "./CartSlice";
+import { removeItemsFromCart } from "./CartSlice.ts";
 export default function Cart() {
   const dispatch=useDispatch();
   const data = useSelector((state) => {

@@ -5,7 +5,7 @@ import Book from "./Book";
 import { Link } from "react-router-dom";
 import "./BookDetails.css";
 import { useDispatch } from "react-redux";
-import { addToCart } from "./CartSlice";
+import { addToCart } from "./CartSlice.ts";
 export default function BookDetails(props) {
   const params = useParams();
   const bookId = params.id;
