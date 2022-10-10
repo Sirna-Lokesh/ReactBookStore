@@ -28,6 +28,7 @@ export default function BookDetails(props) {
       addToCart({ price: Books[index].price, bookNumber: bookId })
     );
   }
+  
   return (
     <div className="main">
       <div className="detailsPage">
@@ -50,15 +51,7 @@ export default function BookDetails(props) {
       </div>
       <div className="description">
         <h5>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ducimus
-          quae incidunt perferendis ullam, accusamus enim, nobis qui laborum
-          doloremque aliquid eos inventore reiciendis accusantium at tempore ad,
-          quasi possimus. Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Repudiandae ut perspiciatis id, fuga deserunt laborum
-          doloremque, mollitia ducimus culpa incidunt quaerat nam facilis
-          voluptas alias a nostrum est quae sit qui amet. Culpa, distinctio
-          laborum? Voluptatibus dolorem, odit ullam suscipit similique facere
-          mollitia ipsa incidunt placeat distinctio modi sit natus.
+        {Books[index].description}
         </h5>
       </div>
     </div>

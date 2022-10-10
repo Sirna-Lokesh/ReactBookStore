@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { placeOrder } from "./CartSlice";
 import Books from "./mydb";
 import { useDispatch } from "react-redux";
+import { removeItemsFromCart } from "./CartSlice";
 export default function Cart() {
+  const dispatch=useDispatch();
   const data = useSelector((state) => {
     return {
       numOfItems: state.cart.numOfItems,
@@ -14,7 +16,18 @@ export default function Cart() {
       orders: state.cart.orders,
     };
   });
-  const dispatch = useDispatch();
+  function removeBooks() {
+    let confirmation=window.confirm("Do you want to delete all Items In Cart");
+    if(confirmation){
+      return dispatch(
+        removeItemsFromCart({})
+    );
+    }
+    else{
+      alert("Books Not Deleted")
+    }
+    
+  }
   const onSubmit = (event) => {
     event.preventDefault();
     console.log("submission prevented");
@@ -57,7 +70,7 @@ export default function Cart() {
       <div className="shoppingBag">
         <h6>Selected Books :</h6>
         {data.selectedBook.map((item, index) => {
-          return <p key={index}>{Books[item-1].title} Is added to Cart</p>;
+          return <p key={index}>{Books[item-1].title} Is added to Cart , and cost is {Books[item-1].price}</p>;
         })}
       </div>
       <div className="emptyDiv"></div>
@@ -65,7 +78,7 @@ export default function Cart() {
         <h6>Payment Information :</h6>
         <p>Items Price :{data.price}</p>
         <p>Tax : {Number(data.price * 0.18)}</p>
-        <p>Shipping Charges : {data.price > 200 ? 0 : 100}</p>
+        <p>Shipping Charges :{data.price==0?0 :data.price > 200 ? 0 : 100}</p>
         <p>
           total Price :
           {(data.price > 200 ? 0 : 100) +
@@ -84,7 +97,7 @@ export default function Cart() {
               CheckOut
             </button>
           </Link>
-          <button id="cancelbtn">Cancel</button>
+          <button onClick={()=>removeBooks()} id="cancelbtn">Cancel</button>
         </div>
       </div>
     </div>

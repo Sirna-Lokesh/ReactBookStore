@@ -29,9 +29,15 @@ const cartSlice=createSlice({
             state.id=[]
             state.price=0
             state.numOfItems=0
+        },
+        removeItemsFromCart:(state,action)=>{
+            state.id=[]
+            state.orders=[]
+            state.price=0
+            state.numOfItems=0
         }
     }
 })
 
 export default cartSlice.reducer;
-export const { addToCart,placeOrder }=cartSlice.actions;
+export const { addToCart,placeOrder ,removeItemsFromCart}=cartSlice.actions;

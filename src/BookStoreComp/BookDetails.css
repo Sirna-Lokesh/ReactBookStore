@@ -21,6 +21,7 @@ img {
     width: 70vw;
     display: flex;
     flex-direction: column;
+    /* border: 2px solid red; */
 }
 .buttons-wrapper{
     width: 40vw;
